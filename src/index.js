@@ -22,4 +22,11 @@ import './styles.css';
 //const heroes = obtenerHeroesArr();
 //console.log(heroes);
 
-obtenerHeroesArr().then(console.table);
+
+console.time('await');
+
+obtenerHeroesArr().then(heroes => {
+    console.log(heroes);
+
+    console.timeEnd('await');
+});

@@ -19,7 +19,9 @@ export const buscarHeroe = (id) => {
     return new Promise((resolve, reject) => {
 
         if (heroe) {
-            resolve(heroe);        
+            setTimeout(() => {
+                resolve(heroe);
+            }, 1000);
         } else {
             reject(`no existe un heroe con el id ${id}`);        
         }
